@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <script src="/static/js/dashboard.js" defer></script>
+</head>
+<body>
+    <button id="home-button" onclick="location.href='{{ url_for('home') }}'">home</button>
+    <header>
+        Admin Dashboard
+    </header>
+
+    <div class="dashboard-container">
+        <h2>Search and Manage Users</h2>
+
+        <!-- Search Bar -->
+        <div class="search-bar-container">
+            <input type="text" id="user-search" placeholder="Search Users...">
+        </div>
+        
+
+        <!-- User Table -->
+        <div class="user-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>Name</th>
+                        <th>Join Date</th>
+                        <th>Assigned Courses</th>
+                    </tr>
+                </thead>
+                <tbody id="user-table-body">
+                    {% for user in users %}
+                    <tr class="user-row">
+                        <td class="user-id">{{ user.id }}</td>
+                        <td class="user-name">{{ user.name }}</td>
+                        <td>{{ user.join_date }}</td>
+                        <td class="assigned-courses">
+                            {% for course in user.courses %}
+                                {{ course.name }} ({{ course.id }}),
+                            {% endfor %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <button id="logout-button" onclick="location.href='{{ url_for('logout') }}'">Logout</button>
+        <!-- Assign Course Section -->
+        <h2>Assign Course</h2>
+        <div class="assign-course-container">
+            <label for="user-id">User ID:</label>
+            <input type="text" id="assign-user-id" placeholder="Enter User ID">
+            <label for="course-id">Course ID:</label>
+            <input type="text" id="assign-course-id" placeholder="Enter Course ID">
+            <button id="assign-course-button">Assign Course</button>
+        </div>
+    </div>
+</body>
+</html>

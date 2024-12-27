@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="stylesheet" href="/static/css/course.css">
+</head>
+<body>
+    <div class="content">
+        <button id="home-button" onclick="location.href='{{ url_for('home') }}'">home</button>
+        <h1>Courses</h1>
+        <div class="cards-container">
+            {% for level, data in levels.items() %}
+            <div class="card" onclick="toggleDetails('{{ level }}')">
+                <h2>{{ level | capitalize }}</h2>
+            </div>
+            <div id="{{ level }}" class="details hidden">
+                <h3>Available Courses</h3>
+                <ul>
+                    {% for course in data.available %}
+                    <li>{{ course }}</li>
+                    {% endfor %}
+                </ul>
+                <h3>Unavailable Courses</h3>
+                <ul>
+                    {% for course in data.unavailable %}
+                    <li>{{ course }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <script src="/static/js/course.js"></script>
+</body>
+</html>

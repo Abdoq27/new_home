@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+       <img src="{{ url_for('static', filename='Images/Icons/icons.png') }}" alt="Icon">
+        
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+  
+</head>
+
+<body>
+    
+    <nav class="navbar">
+        <ul>
+            <li><a href="courses">Courses</a></li>
+            <li><a href="{{ url_for('details') }}">Course Details</a></li>
+            <li><a href="sign">Register/Login</a></li>
+           
+            <li><a href="feedback">F&Q</a></li>
+            <li><a href="feedjana">Feedback</a></li>
+        </ul>
+    </nav>
+    <div class="section1">
+        <div class="s1-context">
+            <p class="welcome">Welcome to</p>
+            <h1>LMS</h1>
+            <p class="disc">We're the biggest, best equipped and most advanced LMS in the greater 6October area.
+            </p>
+            <div class="btn">
+                <button class="learn" id="learnMoreBtn">Learn more</button>
+                <button class="contact">contact us</button>
+            </div>
+        </div>
+    </div>
+    <div class="section2">
+
+        <div class="left-content">
+            <div class="edit-img"><img
+                    src="{{ url_for('static', filename='images/programming-background-with-person-working-with-codes-computer.jpg') }}"
+                    alt="Sample">"
+                alt="bread"></div>
+        </div>
+        <div class="right-content">
+            <h2>Who we are?</h2>
+            <p>We have been operating for over 30 years and are Members of The Federation of Master Builders. We
+                work on projects big and small from small residential extensions to full house. We are so happy with
+                this theme. Everyday it make our lives better.</p>
+            <div class="list">
+                <div class=list-context>
+                    <div class="icon"><img src="images/Icons/leaf.png" alt="leaf"></div>
+                    <div class="icon-context">We care about environment.</div>
+                </div>
+                <div class="list-context">
+                    <div class="icon"><img src="images/Icons/people.png" alt="peeople"></div>
+                    <div class="icon-context">We are trusted by hundreds of clients.</div>
+                </div>
+                <div class="list-context">
+                    <div class="icon"><img src="images/Icons/heart.png" alt="heart"></div>
+                    <div class="icon-context">Social media loves us!</div>
+                </div>
+                <div class="list-context">
+                    <div class="icon"><img src="images/Icons/check.png" alt="check"></div>
+                    <div class="icon-context">This list is super easy to create.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section3">
+        <div class="left-content2">
+            <h2>Our Location</h2>
+            <p>We have been operating for over 30 years and are Members of The Federation of Master Builders. We
+                work on projects big and small from small residential extensions to full house. We are so happy with
+                this theme. Everyday it make our lives better.
+            </p><br>
+            <p>
+                Story on projects big and small from small residential extensions to full house. We are so happy
+                with this theme. Everyday it make our lives better.
+            </p>
+
+        </div>
+
+        <div class="right-content2">
+            <div class="edit-img2"><img src="{{ url_for('static', filename='images/AhramUni.jpeg') }}"  alt="Sample">
+            </div>
+        </div>
+
+    </div>
+    <div class="section4">
+        <div class="top">
+            <h3>Our Courses</h3>
+            <p>Learn more about them. We have worked truly hard to make them perfect for every use.</p>
+        </div>
+        <div class="mid">
+            <div class="part">
+                <div class="food-img"><img
+                        src="{{ url_for('static', filename='images/programming-background-collage.jpg') }}"
+                         alt="Sample"></div>
+                <div class="head-edit">
+                    <h4>Web Programming</h4>
+                </div>
+                <div class="p-edit">
+                    <p>Proin interdum, ante ut sollicitudin commodo, tellus quam sagittis libero, at semper mauris
+                        velit
+                        a velit. Phasellus commodo turpis et lacinia posuere.</p>
+                </div>
+            </div>
+            <div class="part">
+                <div class="food-img"><img
+                        src="{{ url_for('static', filename='images/futuristic-smart-city-with-5g-global-network-technology.jpg') }}"
+                        alt="Sample">
+                    alt="Bagels"></div>
+                <div class="head-edit">
+                    <h4>Networks</h4>
+                </div>
+                <div class="p-edit">
+                    <p>Proin interdum, ante ut sollicitudin commodo, tellus quam sagittis libero, at semper mauris
+                        velit
+                        a velit. Phasellus commodo turpis et lacinia posuere.</p>
+                </div>
+            </div>
+            <div class="part">
+                <div class="food-img"><img src="{{ url_for('static', filename='images/2150061955.jpg') }}" alt="Sample">
+                </div>
+                <div class="head-edit">
+                    <h4>Computer Architecture</h4>
+                </div>
+                <div class="p-edit">
+                    <p>Proin interdum, ante ut sollicitudin commodo, tellus quam sagittis libero, at semper mauris
+                        velit
+                        a velit. Phasellus commodo turpis et lacinia posuere.</p>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <div class="clean-fix"></div>
+
+    </div>
+    <div class="section5">
+
+        <div class="left-content3">
+            <div class="upper">
+                <h2>Contact Information</h2>
+                <p>I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                </p><br>
+            </div>
+            <div>
+                <p>
+                    Our contact details:
+                </p>
+                <div class="list">
+                    <div class=list-context>
+                        <div class="icon"><img src="images/Icons/map.png" alt="map icon"></div>
+                        <div class="icon-context">Manchester St 123-78B, Random 713, UK</div>
+                    </div>
+                    <div class="list-context">
+                        <div class="icon"><img src="images/Icons/phone.png" alt="phone"></div>
+                        <div class="icon-context">+46 123 456 789</div>
+                    </div>
+                    <div class="list-context">
+                        <div class="icon"><img src="images/Icons/headphone.png" alt="headphone"></div>
+                        <div class="icon-context">+37 431 456 789</div>
+                    </div>
+                    <div class="list-context">
+                        <div class="icon"><img src="images/Icons/email.png" alt="email"></div>
+                        <div class="icon-context">hello@sitename.com</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-content3">
+            <div class="edit-img3"><img src="{{ url_for('static', filename='images/Maps.png') }}" alt="Sample"></div>
+        </div>
+
+
+
+    </div>
+    <div class="section6">
+
+        <div class="part">
+            <h4>About us</h4>
+            <p>I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur.
+                I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur.
+            </p>
+            <br>
+            <p>We are the champions! We are the most amazing theme of all time, yeah.</p>
+        </div>
+        <div class="part">
+            <h4>Why we are special</h4>
+            <div class="list">
+                <div class=list-context>
+                    <div class="icon"><img src="images/Icons/arrow.png" alt="map icon"></div>
+                    <div class="icon-context">
+                        <p>Our magical recipe.</p>
+                    </div>
+                </div>
+                <div class="list-context">
+                    <div class="icon"><img src="images/Icons/arrow.png" alt="phone"></div>
+                    <div class="icon-context">
+                        <p>We care about environment.</p>
+                    </div>
+                </div>
+                <div class="list-context">
+                    <div class="icon"><img src="images/Icons/arrow.png" alt="headphone"></div>
+                    <div class="icon-context">
+                        <p>We are trusted by hundreds of clients.</p>
+                    </div>
+                </div>
+                <div class="list-context">
+                    <div class="icon"><img src="images/Icons/arrow.png" alt="email"></div>
+                    <div class="icon-context">
+                        <p>Social media loves us!</p>
+                    </div>
+                </div>
+                <div class="list-context">
+                    <div class="icon"><img src="images/Icons/arrow.png" alt="email"></div>
+                    <div class="icon-context">
+                        <p>This list is super easy to create.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="part">
+            <h4>Why we are special</h4>
+            <div class="list">
+                <div class=list-context>
+                    <div class="icon"><img src="images/Icons/arrow.png" alt="map icon"></div>
+                    <div class="icon-context">
+                        <p>Monday 10AM - 9PM</p>
+                    </div>
+                </div>
+                <div class="list-context">
+                    <div class="icon"><img src="images/Icons/arrow.png" alt="phone"></div>
+                    <div class="icon-context">
+                        <p>Tuesday 10AM - 9PM</p>
+                    </div>
+                </div>
+                <div class="list-context">
+                    <div class="icon"><img src="images/Icons/arrow.png" alt="headphone"></div>
+                    <div class="icon-context">
+                        <p>Wednesday 10AM - 9PM</p>
+                    </div>
+                </div>
+                <div class="list-context">
+                    <div class="icon"><img src="images/Icons/arrow.png" alt="email"></div>
+                    <div class="icon-context">
+                        <p>Thursday 10AM - 10PM</p>
+                    </div>
+                </div>
+                <div class="list-context">
+                    <div class="icon"><img src="images/Icons/arrow.png" alt="email"></div>
+                    <div class="icon-context">
+                        <p>Friday 10AM - 10PM</p>
+                    </div>
+                </div>
+                <div class="list-context">
+                    <div class="icon"><img src="images/Icons/arrow.png" alt="email"></div>
+                    <div class="icon-context">
+                        <p>Weekends 10AM - 11PM</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="part">
+            <h4>Why we are special</h4>
+            <div class="list">
+                <div class=list-context>
+                    <div class="icon"><img src="images/Icons/arrow.png" alt="map icon"></div>
+                    <div class="icon-context">
+                        <p>Our magical recipe.</p>
+                    </div>
+                </div>
+                <div class="list-context">
+                    <div class="icon"><img src="images/Icons/arrow.png" alt="phone"></div>
+                    <div class="icon-context">
+                        <p>We care about environment.</p>
+                    </div>
+                </div>
+                <div class="list-context">
+                    <div class="icon"><img src="images/Icons/arrow.png" alt="headphone"></div>
+                    <div class="icon-context">
+                        <p>We are trusted by hundreds of clients.</p>
+                    </div>
+                </div>
+                <div class="list-context">
+                    <div class="icon"><img src="images/Icons/arrow.png" alt="email"></div>
+                    <div class="icon-context">
+                        <p>Social media loves us!</p>
+                    </div>
+                </div>
+                <div class="list-context">
+                    <div class="icon"><img src="images/Icons/arrow.png" alt="email"></div>
+                    <div class="icon-context">
+                        <p>This list is super easy to create.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="section7">
+        <div class="contents">
+            <div class="Bakery-img"><img src="{{ url_for('static', filename='images/acu-logo.png') }}" alt="Sample">
+            </div>
+            <p>Copyright 2017. All rights reserved.</p>
+            <div class="apps-img">
+                <div class="apps"><img src="images/Icons/facebook.png" alt="facebook"></div>
+                <div class="apps"><img src="images/Icons/google.png" alt="google"></div>
+                <div class="apps"><img src="images/Icons/linkedin.png" alt="linkedin"></div>
+                <div class="apps"><img src="images/Icons/twitter.png" alt="twitter"></div>
+            </div>
+            <div class="clean-fix"></div>
+        </div>
+
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Function to handle fade-in animations when elements are in view
+            function fadeInOnScroll() {
+                const elements = document.querySelectorAll('.fade-in');
+                elements.forEach(element => {
+                    const rect = element.getBoundingClientRect();
+                    const windowHeight = window.innerHeight;
+
+                    if (rect.top <= windowHeight * 0.8) {
+                        element.classList.add('show');
+                    } else {
+                        element.classList.remove('show');
+                    }
+                });
+            }
+
+            // Add 'fade-in' class to the elements you want to animate on scroll
+            const fadeInElements = document.querySelectorAll('.section1, .section2, .section3, .section4, .section5, .section6, .section7');
+            fadeInElements.forEach(element => {
+                element.classList.add('fade-in');
+            });
+
+            // Scroll event listener
+            window.addEventListener('scroll', fadeInOnScroll);
+            fadeInOnScroll(); // Run the function initially in case elements are already in view
+
+            // Adding hover effect to buttons to scale them up
+            const buttons = document.querySelectorAll('.btn button');
+            buttons.forEach(button => {
+                button.addEventListener('mouseenter', function () {
+                    button.style.transform = 'scale(1.1)';
+                    button.style.transition = 'transform 0.2s ease';
+                });
+
+                button.addEventListener('mouseleave', function () {
+                    button.style.transform = 'scale(1)';
+                    button.style.transition = 'transform 0.2s ease';
+                });
+            });
+
+            // Adding rotation effect on all images when "Learn More" is clicked
+            document.querySelector('.learn').addEventListener('click', function () {
+                const images = document.querySelectorAll('img'); // Select all images
+                images.forEach(image => {
+                    image.style.transition = 'transform 1s'; // Set transition for smooth animation
+                    image.style.transform = 'rotate(360deg)'; // Apply the rotation
+                });
+            });
+
+            // Animating elements on page load (fade-in from bottom)
+            const sections = document.querySelectorAll('.section1, .section2, .section3, .section4, .section5, .section6, .section7');
+            sections.forEach(section => {
+                section.style.opacity = 0;
+                section.style.transition = 'opacity 1s ease-in-out, transform 1s ease-in-out';
+                section.style.transform = 'translateY(50px)'; // Start with the section lower than usual
+            });
+
+            // After DOM is loaded, fade in sections and move them up
+            setTimeout(() => {
+                sections.forEach(section => {
+                    section.style.opacity = 1;
+                    section.style.transform = 'translateY(0)';
+                });
+            }, 500); // Delay for better effect
+
+            // Optional: Add a smooth scroll effect to anchor links
+            const anchorLinks = document.querySelectorAll('a[href^="#"]');
+            anchorLinks.forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 50, // Adjust scroll position slightly
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+    <style>
+        /* Adding some basic styles for the fade-in effect */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        }
+
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
+</body>
+
+</html>

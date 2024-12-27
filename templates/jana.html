@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Feedback</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/jana.css') }}">
+    <script src="{{ url_for('static', filename='css/jana.js') }}" defer></script>
+</head>
+
+<body>
+    <button id="home-button" onclick="location.href='{{ url_for('home') }}'">home</button>
+    <div class="container">
+        <h1>Course Feedback</h1>
+        <form id="feedbackForm" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="course">Course:</label>
+            <input type="text" id="course" name="course" required><br><br>
+
+            <label for="feedback">Your Feedback:</label><br>
+            <textarea id="feedback" name="feedback" rows="4" required></textarea><br><br>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+
+        <div id="successMessage" class="hidden">
+            <p>Thank you for your feedback!</p>
+        </div>
+    </div>
+</body>
+
+</html>

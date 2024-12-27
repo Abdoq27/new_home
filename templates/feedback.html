@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/feedback.css') }}">
+</head>
+
+<body>
+    <button id="home-button" onclick="location.href='{{ url_for('home') }}'">home</button>
+    <div class="qa-container">
+        <h1>Q&A Section</h1>
+        <div id="qa-list">
+            {% for item in qa_data %}
+            <div class="qa-item">
+                <button class="question-btn">{{ item.question }}</button>
+                <div class="answer" style="display: none;">{{ item.answer }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/feedback.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1C1E1F;
+    color: white;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 2em;
+}
+
+.card {
+    background-color: #24394f;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 200px;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.details {
+    margin: 1em 2em;
+    padding: 1em;
+    border: 1px solid white;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hidden {
+    display: none;
+}
+#home-button {
+    background-color: #24394f;
+    color: white;}
